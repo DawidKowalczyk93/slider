@@ -1,8 +1,47 @@
-.slider {}
+:root {
+    --sliderHeight: 400px;
+}
 
-.slider .slider__slides{}
+.slider {
+    background-color: peru;
+    margin-top: 300px;
+    overflow: hidden;
+    width: 100%;
+    min-height: var(--sliderHeight);
+}
 
-.slider .slider__side{}
+.slider .slider__slides{
+    position: relative;
+}
+
+.slider .slider__slide {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    min-height: var(--sliderHeight);
+}
+.slider .slider__slide:first-child {
+    background-image: url("../images/car1.jpeg");
+    left: 0;
+    
+}
+
+.slider .slider__slide:nth-child(2) {
+    background-image: url(../images/car2.jpg);
+    left: 100%;
+}
+.slider .slider__slide:last-child {
+    background-image: url(../images/car3.jpg);
+    left: 200%;
+}
+
+.slider .slider__box {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 .slider .slider__hdl{}
 

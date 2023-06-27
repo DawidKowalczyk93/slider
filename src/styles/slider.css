@@ -25,10 +25,15 @@
 
 }
 
+@keyframes slide-1 {
+    0% {left: 0}
+    100% {left: -100%}
+}
+
 .slider {
     background-color: peru;
     
-    /* overflow: hidden; */
+    overflow: hidden; 
     width: 100%;
     min-height: var(--sliderHeight);
 }
@@ -45,12 +50,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
 }
 
 .slider .slider__slide:first-child {
     background-image: url("../images/car4.webp");
     left: 0;
+    animation-name: slide-1;
+    
     
 }
 
@@ -76,7 +86,7 @@
 }
 
 .slider .slider__hdl{
-    font-weight: 500;
+    margin-top: 0;
 }
 
 .slider .slider__lead {
